@@ -1,0 +1,11 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <a ngbNavLink class="nav-left">Overview</a>
+    <ng-template ngbNavContent><app-overview></app-overview></ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink class="nav-right">Purchases</a>
+    <ng-template ngbNavContent><app-purchases [purchaseList]="purchaseList"></app-purchases></ng-template>
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>

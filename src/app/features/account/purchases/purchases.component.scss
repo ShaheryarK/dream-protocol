@@ -1,0 +1,9 @@
+.purchases-container{
+  padding: 50px;
+}
+
+@media only screen and (max-width: 930px) {
+  .purchases-container{
+    padding: 15px;
+  }
+}

@@ -1,0 +1,75 @@
+.marketplace-container {
+  .wl-frame{
+    width: 288px;
+  }
+  .wl-thumbnail-container {
+    position: absolute;
+    top: 10px;
+    z-index: -1;
+    left: 10px;
+  }
+  .wl-thumbnail {
+    height: 260px;
+    width: 260px;
+  }
+  .wl-date{
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+  .wl-content {
+    position: absolute;
+    bottom: 30px;
+    width: 229px;
+    height: 70px;
+    padding: 0px 0px;
+    left: 30px;
+  }
+  .wl-price {
+    font-family: "Pixellari";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #25b201;
+  }
+  .wl-title {
+    font-family: "Pixellari";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+
+    color: #ffffff;
+  }
+  .wl-detail-container {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wl-spot-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+
+    color: #ffffff;
+  }
+  .wl-social-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 9px;
+    width: 120px;
+  }
+
+  .wl-social-icon {
+    height: 17px;
+    cursor: pointer;
+  }
+}

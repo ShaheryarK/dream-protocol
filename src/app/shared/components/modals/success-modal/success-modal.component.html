@@ -1,0 +1,17 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="modal-title">SUCCESS!</div>
+  <p class="modal-description-text">Your purchase is successful</p>
+
+  <div
+    class="d-flex justify-content-center"
+    style="position: relative; cursor: pointer"
+    (click)="purchaseDone.emit(true)"
+  >
+    <img
+      class="img-btn-small img-btn-glow"
+      src="assets/images/themes/theme{{ currentTheme | async }}/btn.svg"
+      alt=""
+    />
+    <div class="img-btn-text modal-btn-text">CLOSE</div>
+  </div>
+</div>

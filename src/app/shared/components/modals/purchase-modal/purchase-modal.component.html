@@ -1,0 +1,23 @@
+<div
+  class="d-flex flex-column align-items-center"
+>
+  <div class="modal-title">PURCHASE</div>
+  <div class="purchase-label-text">Enter Discord ID</div>
+  <input class="dp-input-field" type="text" name="" id="" />
+
+  <div class="purchase-label-text">Enter Wallet Address</div>
+  <input class="dp-input-field" type="text" name="" id="" />
+
+  <div
+    class="d-flex justify-content-center"
+    style="position: relative; cursor: pointer; margin-top: 44px"
+    (click)="confirmPurchase()"
+  >
+    <img
+      class="img-btn-small img-btn-glow"
+      src="assets/images/themes/theme{{ currentTheme | async }}/btn.svg"
+      alt=""
+    />
+    <div class="img-btn-text modal-btn-text">CONFIRM</div>
+  </div>
+</div>

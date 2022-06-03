@@ -1,0 +1,71 @@
+<div class="d-flex align-items-center flex-column">
+  <div class="dp-card-container overview-container">
+    <div>
+      <div class="card-title-text">Your Profile</div>
+      <div class="card-small-text">Currently Staked: 0% of all Dreams</div>
+    </div>
+    <div class="wallet-info-container">
+      <div>
+        <div class="card-subtitle-text">Balance</div>
+        <div class="card-text">X DC</div>
+      </div>
+      <div>
+        <div class="card-subtitle-text">Tokens</div>
+        <div class="card-text">X</div>
+      </div>
+      <div>
+        <div class="card-subtitle-text">Multiplier</div>
+        <div class="card-text">0%</div>
+      </div>
+    </div>
+    <div
+      class="yield-info-container"
+    >
+      <div>
+        <div class="card-subtitle-text-small">Daily Yield</div>
+        <div class="card-medium-text">X DC</div>
+      </div>
+      <div>
+        <div class="card-subtitle-text-small">Total Yield</div>
+        <div class="card-medium-text">X DC</div>
+      </div>
+    </div>
+    <div class="card-small-text" style="margin-top: 30px">
+      You do not have any Dream NFTs staked.
+    </div>
+  </div>
+  <div class="dp-card-container unstaked-container">
+    <div>
+      <div class="card-title-text">Unstaked Dream NFTs</div>
+      <div class="card-small-text">
+        You do not own any Dream NFTs yet, get one below!
+      </div>
+      <div>
+        <ul class="nft-list">
+          <li class="nft-list-item">
+            <div class="nft-content">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://www.creepz.co/static/media/arms-gif.f4ff79ba.gif"
+                  class="nft-thumbnail"
+                  alt=""
+                />
+                <div class="nft-list-item-text-container">
+                  <div class="nft-list-item-text">Flappy Boys #1048</div>
+                  <div *ngIf="!(isHandset$ | async)">Launches 18/05/2022</div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center">
+                <div class="nft-list-item-text">600 DC</div>
+                <div class="nft-arrow-icon">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

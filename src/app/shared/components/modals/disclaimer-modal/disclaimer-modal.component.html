@@ -1,0 +1,38 @@
+<!-- <div class="modal-header">
+  <h4 class="modal-title">Hi there!</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <p>Hello, {{name}}!</p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div> -->
+
+<div
+class="d-flex flex-column align-items-center"
+>
+  <div class="modal-title">DISCLAIMER</div>
+  <p class="modal-description-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas vel nulla
+    commodo ultrices justo, massa sed facilisi sit. Viverra tempor suscipit
+    purus vel, nunc vivamus dignissim suspendisse mus. Imperdiet ipsum,
+    pellentesque lacinia vitae vestibulum. Faucibus ultricies dictum tortor
+    consectetur venenatis vel, senectus. Ultrices sit neque tempor consequat.
+    Suspendisse commodo, cursus integer nisl, orci netus quis. Consequat neque
+    nulla commodo fermentum vitae.
+  </p>
+
+  <div
+    class="d-flex justify-content-center"
+    style="position: relative; cursor: pointer"
+    (click)="disclaimerAccepted.emit(true)"
+  >
+    <img
+      class="img-btn-small img-btn-glow"
+      src="assets/images/themes/theme{{ currentTheme | async }}/btn.svg"
+      alt=""
+    />
+    <div class="img-btn-text modal-btn-text">ACCEPT</div>
+  </div>
+</div>

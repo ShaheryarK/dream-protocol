@@ -1,1 +1,608 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: Pixellari;
+  src: local("Pixellari"), url(assets/fonts/Pixellari.ttf) format("truetype");
+}
+$primary: var(--primary-theme-color, #ef8fb9);
+$secondary: var(--secondary-theme-color, #ffffff);
+$shadow: var(--shadow-color, #220c65);
+$btnBgSmall: var(--btn-bg-small-color, #ef8fb9);
+
+$btnBgMedium: var(--btn-bg-medium-color, #e00000);
+$btnBgBig: var(--btn-bg-big-color, #220c65);
+$tabColor: var(--tab-color, #ef8fb9);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-family: "Pixellari";
+  margin: 0;
+  padding: 0;
+  min-height: 100% !important;
+  height: 100%;
+}
+
+.heading-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 76px;
+  text-align: center;
+  color: $primary;
+
+  text-shadow: 0px 0px 8px $primary;
+}
+
+.card-title-text {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 52px;
+
+  color: $tabColor;
+  text-align: center;
+}
+.card-subtitle-text {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  color: $tabColor;
+  text-align: center;
+}
+.card-subtitle-text-small {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: $tabColor;
+  text-align: center;
+}
+.card-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  color: #ffffff;
+  text-align: center;
+}
+.card-medium-text {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 35px;
+
+  color: #ffffff;
+  text-align: center;
+}
+.card-small-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 45px;
+  color: #ffffff;
+  text-align: center;
+}
+.medium-text {
+  font-size: 32px;
+  line-height: 35px;
+  /* identical to box height */
+  color: $primary;
+  text-shadow: 0px 0px 8px $primary;
+}
+
+.medium-text-dropdown {
+  font-size: 32px;
+  line-height: 35px;
+  /* identical to box height */
+  color: $primary;
+  text-shadow: 0px 0px 8px $primary;
+  cursor: pointer;
+}
+.dropdown-menu {
+  background: $shadow;
+  opacity: 0.9;
+  border-radius: 8px;
+  padding: 0px;
+}
+.dropdown-item {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+
+  color: $primary;
+  border-bottom: 1px solid $primary;
+  padding: 24px;
+}
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  filter: drop-shadow(0px 0px 8px $primary);
+}
+.nav-toggle-container .dropdown-toggle::after {
+  display: none;
+}
+.description-text {
+  font-size: 32px;
+  line-height: 35px;
+  text-align: justify;
+
+  color: $secondary;
+
+  text-shadow: 0px 0px 8px $shadow;
+}
+
+.balance-container {
+  background: $btnBgBig;
+  border: 4px solid $primary;
+  box-shadow: 0px 0px 8px $primary;
+  border-radius: 8px;
+  padding: 10px;
+  gap: 10px;
+
+  position: absolute;
+  width: 187px;
+  height: 46px;
+}
+
+.dp-card-container {
+  background: $btnBgBig;
+  opacity: 0.9;
+  box-shadow: 0px 0px 8px $primary;
+  border-radius: 8px;
+}
+.about-container {
+  width: 1294px;
+  padding: 70px;
+  margin: 35px 0px 35px 0px;
+}
+
+.about-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  text-align: justify;
+
+  color: #ffffff;
+
+  text-shadow: 0px 0px 8px $btnBgBig;
+}
+
+.img-btn-text {
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  color: $primary;
+}
+.btn-small {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  position: relative;
+  width: fit-content;
+  color: $secondary;
+  height: 35px;
+  background: $btnBgSmall;
+  box-shadow: inset 0px 0px 6px $primary;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-medium {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  gap: 10px;
+
+  position: relative;
+  width: fit-content;
+  color: #ffffff;
+  height: 35px;
+  background: $btnBgMedium;
+  box-shadow: inset 0px 0px 6px $primary;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-big {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  gap: 10px;
+  height: 35px;
+  width: fit-content;
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+  background: $btnBgBig;
+  box-shadow: 0px 0px 8px $primary;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Importing Bootstrap SCSS file. */
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.nav-tabs .nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  height: 74px;
+  background: $btnBgBig;
+  box-shadow: 0px 0px 8px rgb(255 255 255 / 30%), 0px 0px 8px $tabColor;
+  // border-radius: 8px 0px 0px 8px;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 54px;
+
+  color: $tabColor;
+
+  text-shadow: 0px 0px 8px $btnBgBig;
+  border: none;
+}
+
+// .nav-tabs .nav-link:last-child {
+//   border-radius: 0px 8px 8px 0px;
+// }
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  height: 74px;
+
+  background: $tabColor;
+  opacity: 0.5;
+  box-shadow: 0px 0px 8px $btnBgBig;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 54px;
+
+  color: $btnBgBig;
+  cursor: default;
+}
+.nav-left {
+  border-radius: 8px 0px 0px 8px !important;
+}
+.nav-right {
+  border-radius: 0px 8px 8px 0px !important;
+}
+
+.header-nav-link.is-active {
+  filter: drop-shadow(0px 0px 8px $primary);
+  transition: transform 0.2s;
+  transform: scale(1.2);
+}
+
+.tab-content > .active {
+  margin-top: 70px;
+}
+
+.nft-list {
+  list-style: none;
+  padding: 0px 20px;
+}
+.nft-list-item {
+  padding: 8px;
+  border-top: 1px solid $tabColor;
+  cursor: pointer;
+}
+
+.nft-list-item-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: #ffffff;
+  text-align: center;
+}
+.nft-list-item:last-child {
+  border-bottom: 1px solid $tabColor;
+}
+
+.nft-arrow-icon {
+  margin-left: 25px;
+  font-size: 30px;
+  color: $tabColor;
+}
+
+.nft-thumbnail {
+  height: 67px;
+  border-radius: 41px;
+}
+
+// thead, tbody, tfoot, tr, td, th {
+//   vertical-align: middle;
+//   text-align: center;
+//   border: none !important;
+// }
+.purchase-item-header {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  color: $tabColor;
+  text-align: center;
+  flex: 1;
+}
+
+.purchase-item-container {
+  background: $tabColor;
+  box-shadow: 0px 0px 8px $tabColor;
+  border-radius: 8px;
+  margin: 26px 0px;
+  padding: 15px 10px;
+}
+.purchase-item-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: #ffffff;
+  text-align: center;
+  flex: 1;
+}
+
+.flex-half {
+  flex: 0.5;
+}
+
+.modal-content {
+  background: $btnBgBig;
+  opacity: 0.9;
+  box-shadow: 0px 0px 8px $primary;
+  border-radius: 8px;
+  width: 390px;
+}
+
+.modal-title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  color: $tabColor;
+  text-shadow: 0px 0px 8px $tabColor;
+}
+.modal-description-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  margin: 20px 0px 40px 0px;
+}
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+}
+
+.img-btn-small {
+  height: 63px;
+}
+.img-btn-glow {
+  filter: drop-shadow(0px 0px 14px $tabColor);
+}
+.modal-btn-text {
+  position: absolute;
+  top: 21px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.dp-input-field {
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 0px 0px 8px $tabColor;
+  border-radius: 8px;
+  height: 52px;
+  width: 100%;
+  padding: 10px;
+}
+
+.checkbox-menu {
+  min-width: 200px;
+}
+.checkbox-menu .dropdown-item:hover,
+.dropdown-item:focus {
+  color: $primary;
+  background-color: inherit;
+}
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: $primary;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.navbar-toggler {
+  color: $primary;
+}
+
+element.style {
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  /* box-shadow: 0 0 0 0.25rem; */
+}
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+.navbar-toggler {
+  color: var(--primary-theme-color, #ef8fb9);
+}
+.navbar-toggler {
+  font-size: 23px;
+  background-color: transparent;
+  border: none;
+  transition: box-shadow 0.15s ease-in-out;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.social-icon{
+  color: $primary;
+  font-size: 24px;
+  margin: 10px 20px;
+}
+
+@media only screen and (max-width: 930px) {
+  .heading-text {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .medium-text-dropdown {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .balance-container {
+    position: unset;
+    padding: 2px;
+    height: auto;
+    width: auto;
+  }
+  .wl-spot-container {
+    padding: 0px !important;
+    margin: 20px 0px;
+  }
+  .about-container {
+    width: auto;
+    padding: 40px;
+    margin: 20px 15px;
+  }
+  .about-text {
+    font-size: 18px;
+  }
+
+  .nav-tabs .nav-link {
+    height: auto;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    height: auto;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .purchase-item-header {
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 10px;
+    line-height: 20px;
+    margin: 2px;
+    flex: 1;
+    padding: 2px;
+    cursor: pointer;
+  }
+  .purchase-item-text {
+    font-size: 16px;
+    line-height: 17px;
+    flex: none;
+  }
+  .nft-thumbnail {
+    height: 54px;
+  }
+  .nft-list-item-text{
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0px 8px;
+  }
+  .card-title-text {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .card-small-text {
+    font-size: 17px;
+    margin: 20px 0px;
+    line-height: 20px;
+  }
+  .card-subtitle-text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .card-text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .card-subtitle-text-small{
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .card-medium-text{
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .mobile-nav-menu .dropdown-item{
+    padding: 15px 10px;
+  }
+}

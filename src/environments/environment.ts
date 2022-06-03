@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  backendUrl: 'https://flappyboys.herokuapp.com',
+  frontEndUrl: 'http://localhost:4200',
+  // serverUrl:"http://18.157.76.169:1337",
 };
 
 /*

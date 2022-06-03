@@ -1,0 +1,30 @@
+.balance-amount {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: #25b201;
+}
+
+.balance-label {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 930px) {
+.balance-label{
+  font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+}
+.balance-amount{
+  font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+}
+}

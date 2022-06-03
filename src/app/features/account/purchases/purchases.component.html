@@ -1,0 +1,57 @@
+<div class="purchases-container" *ngIf="purchaseList.length > 0">
+  <div class="d-flex justify-content-end" style="margin-bottom: 20px" *ngIf="!(isHandset$ | async)">
+    <div ngbDropdown placement="bottom-end">
+      <span
+        class="medium-text-dropdown"
+        style="font-weight: 400; font-size: 24px; line-height: 26px"
+        fxLayout="row"
+        fxLayoutAlign="center center"
+        ngbDropdownToggle
+        >Sort by</span
+      >
+      <div ngbDropdownMenu aria-labelledby="dropdownCategories">
+        <button ngbDropdownItem>Oldest to Newest</button>
+        <button ngbDropdownItem>Newest to Oldest</button>
+        <button ngbDropdownItem>Name</button>
+        <button ngbDropdownItem>Category</button>
+        <button ngbDropdownItem>Price: Low to High</button>
+        <button ngbDropdownItem>Price: High to Low</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dp-card-container" style="padding: 30px">
+    <div
+      class="d-flex justify-content-between"
+      style="padding: 0px 10px; margin: 10px 0px 40px 0px"
+    >
+      <div class="purchase-item-header flex-half">ITEM</div>
+      <div class="purchase-item-header">NAME</div>
+      <div class="purchase-item-header">CATEGORY</div>
+      <div class="purchase-item-header">PRICE</div>
+      <div class="purchase-item-header flex-half">DATE</div>
+    </div>
+    <div>
+      <div
+        *ngFor="let purchase of purchaseList | orderBy: sortBy; index as i"
+        class="d-flex justify-content-between align-items-center purchase-item-container"
+      >
+        <div class="flex-half" style="display: flex; justify-content: center">
+          <img
+            src="https://www.creepz.co/static/media/arms-gif.f4ff79ba.gif"
+            class="nft-thumbnail"
+            alt=""
+          />
+        </div>
+        <div class="purchase-item-text">Flappy Boys #1048</div>
+        <div class="purchase-item-text" *ngIf="!(isHandset$ | async)">
+          Flappy Boys
+        </div>
+        <div class="purchase-item-text">660 DC</div>
+        <div class="purchase-item-text flex-half" *ngIf="!(isHandset$ | async)">
+          07/05/2022
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

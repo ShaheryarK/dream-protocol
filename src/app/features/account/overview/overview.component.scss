@@ -1,0 +1,56 @@
+.overview-container {
+  width: 893px;
+  height: 351px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 150px;
+}
+.wallet-info-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.yield-info-container {
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.unstaked-container {
+  width: 893px;
+  margin: 55px 0px;
+  padding: 20px 205px;
+}
+
+.nft-content {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nft-list-item-text-container{
+  margin-left: 30px;
+}
+@media only screen and (max-width: 930px) {
+  .overview-container {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin: 0px 20px;
+  }
+  .unstaked-container {
+    width: auto;
+    padding: 20px;
+    margin: 20px;
+  }
+  .wallet-info-container {
+    flex-direction: column;
+  }
+  .yield-info-container{
+    width: 100%;
+  }
+  .nft-list-item-text-container{
+    margin-left: 0px;
+  }
+}

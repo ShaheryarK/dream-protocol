@@ -1,0 +1,150 @@
+<div class="marketplace-container">
+  <div>
+    <h1 class="heading-text">MARKETPLACE</h1>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div ngbDropdown [autoClose]="'outside'" #checkboxDrop="ngbDropdown">
+        <span
+          class="medium-text-dropdown"
+          style="margin-right: 70px"
+          ngbDropdownToggle
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          >Categories</span
+        >
+        <div ngbDropdownMenu class="checkbox-menu">
+          <ng-container *ngFor="let category of categories">
+            <div ngbDropdownItem class="d-flex justify-content-between">
+              <span>{{ category.name }}</span>
+
+              <input
+                type="checkbox"
+                name="checkbox"
+                (change)="onCheckboxChange(category.id, $event)"
+              />
+            </div>
+          </ng-container>
+          <div style="padding: 20px; display: flex; justify-content: center">
+            <div
+              class="btn-small"
+              (click)="applyFilter(); checkboxDrop.close()"
+            >
+              Apply Filter
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ngbDropdown>
+        <span
+          class="medium-text-dropdown"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          ngbDropdownToggle
+          >Sort by</span
+        >
+        <div ngbDropdownMenu aria-labelledby="dropdownCategories">
+          <button ngbDropdownItem (click)="sortBy = 'info.created'">
+            Recently Created
+          </button>
+          <button ngbDropdownItem (click)="sortBy = 'info.expires'">
+            Ending Soon
+          </button>
+          <button ngbDropdownItem (click)="sortBy = 'availability.price'">
+            Price: Low to High
+          </button>
+          <button ngbDropdownItem (click)="sortBy = '-availability.price'">
+            Price: High to Low
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="padding: 0px 100px; margin-top: 50px !important"
+    [hidden]="hideContent"
+  >
+    <div
+      fxLayout="row wrap"
+      fxLayoutGap="40px grid"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    >
+      <div
+        *ngFor="
+          let item of items
+            | filterBy: ['info.category']:filterByCategories
+            | orderBy: sortBy
+        "
+        class="wl-spot-container"
+      >
+        <div style="position: relative; z-index: 1">
+          <img
+            class="wl-frame"
+            src="assets/images/themes/theme{{ currentTheme | async }}/frame.svg"
+            alt=""
+            srcset=""
+          />
+          <div class="wl-date" *ngIf="item?.info?.expires">
+            {{ item.info.expires * 1000 | date: "dd-MMM-yy" }}
+          </div>
+          <div class="wl-thumbnail-container" *ngIf="item.links.img">
+            <img
+              src="{{ item.links.img }}"
+              alt=""
+              srcset=""
+              class="wl-thumbnail"
+            />
+          </div>
+          <div class="wl-content">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+              <div class="wl-title">
+                {{ item?.info?.name }}
+              </div>
+              <div class="wl-price">{{ item?.availability?.price }} DC</div>
+            </div>
+
+            <div class="wl-detail-container">
+              <div>
+                <div class="wl-spot-text">
+                  SPOTS AVAILABLE: {{ item?.availability?.qty }}
+                </div>
+                <div class="wl-social-container">
+                  <img
+                    *ngIf="item?.links?.discord"
+                    (click)="goToLink(item.links.discord)"
+                    class="wl-social-icon"
+                    src="assets/images/others/discord.svg"
+                    alt=""
+                    srcset=""
+                  />
+                  <img
+                  *ngIf="item?.links?.twitter"
+                    (click)="goToLink(item.links.twitter)"
+                    class="wl-social-icon"
+                    src="assets/images/others/twitter.svg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div *ngIf="item.availability.qty > 0">
+                <div
+                  class="btn-small"
+                  *ngIf="item.availability.price <= balance"
+                  (click)="startPurchaseFlow()"
+                >
+                  CLAIM
+                </div>
+                <div class="btn-big" *ngIf="item.availability.price > balance">
+                  GET MORE $$
+                </div>
+              </div>
+              <div *ngIf="item.availability.qty == 0">
+                <div class="btn-medium">SOLD OUT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

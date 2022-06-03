@@ -1,0 +1,15 @@
+<div style="padding: 35px 45px">
+  <div *ngIf="isSuccess == false">
+    <app-disclaimer-modal
+      *ngIf="isDisclaimerAccepted == false"
+      (disclaimerAccepted)="isDisclaimerAccepted = $event"
+    ></app-disclaimer-modal>
+    <app-purchase-modal
+      *ngIf="isDisclaimerAccepted == true"
+      (purchaseSuccess)="isSuccess = $event"
+    ></app-purchase-modal>
+  </div>
+  <div *ngIf="isSuccess == true">
+    <app-success-modal (purchaseDone)="activeModal.close('Close click')"></app-success-modal>
+  </div>
+</div>

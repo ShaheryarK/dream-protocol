@@ -1,0 +1,28 @@
+.header-logo {
+  height: 78px;
+  cursor: pointer;
+}
+
+.header-nav-links {
+  display: flex;
+  align-items: center;
+}
+.header-nav-link {
+  height: 50px;
+  margin: 0px 12px;
+  cursor: pointer;
+}
+
+.header-container {
+  padding: 10px 15px 0px 58px;
+}
+
+
+@media only screen and (max-width: 930px) {
+  .header-logo {
+    height: 41px;
+  }
+  .header-container{
+    padding: 21px 14px;
+  }
+}

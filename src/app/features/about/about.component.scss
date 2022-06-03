@@ -1,0 +1,22 @@
+
+.about-btn{
+  font-size: 32px;
+  line-height: 128px;
+  position: absolute;
+  cursor: pointer;
+}
+.about-btn-bg-img{
+  height: 125px;
+}
+
+@media only screen and (max-width: 930px) {
+  .about-btn{
+    font-size: 16px;
+    line-height: 67px;
+    position: absolute;
+    cursor: pointer;
+  }
+  .about-btn-bg-img{
+    height: auto;
+  }
+}

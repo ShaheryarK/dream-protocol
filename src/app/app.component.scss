@@ -1,0 +1,12 @@
+.bg-container{
+  /* The image used */
+  background-image: url("../assets/images/themes/theme1/bg.svg");
+
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
